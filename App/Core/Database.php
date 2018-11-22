@@ -1,13 +1,10 @@
 <?php
 
-class Database
-{
+class Database{
     private $connection;
     
-    public function __construct()
-    {
-        try 
-        {
+    public function __construct(){
+        try{
             $this->connection = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USERNAME,DB_PASSWORD,
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));   
         }
@@ -23,9 +20,6 @@ class Database
     }
 
 }
-
-
-
 
 class Model
 {
